@@ -1,5 +1,9 @@
 Repositorio de referencia de la prueba de Luciano Spinelli para entrar en el equipo de DATA-IDD
 
+A- Propuesta ("letra del ejercicio")
+
+B- Indice del proceso seguido
+
 ---
 # A - PROPUESTA DE PRUEBA
 Mercado Pago ha implementado una nueva campaña de marketing para un producto de Mercado Crédito. Esta prueba tiene como objetivo comprender y analizar el comportamiento de los clientes en base a un conjunto de datos de esta campaña.
@@ -51,7 +55,8 @@ Voy a proceder a explicar los pasos que me he planteado para resolver los pedido
 4. Almacenamiento de datos.
 
 ## ANALISIS
-  ### SQL
+ ### [GoogleColab  donde puede reproducirse el analisis](https://colab.research.google.com/drive/1_wu4zk9XvLZZoL8ymi5xaylE9DacwnL8)
+   ### SQL
   1. Conexion a BD
   2. Consultas solicitadas y visualización preliminar de resultados
   ### EDA (Exploratory Data Analysis) 
