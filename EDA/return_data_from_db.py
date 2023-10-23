@@ -3,6 +3,12 @@ import pandas as pd
 import os
 
 def return_data_from_db():
+    """
+    Obtiene datos de una base de datos SQLite.
+
+    Returns:
+    DataFrame: Los datos obtenidos desde la base de datos.
+    """
     # Obtiene la ruta del directorio actual del script (directorios superiores)
     script_directory = os.path.dirname(os.path.abspath(__file__))
     parent_directory = os.path.dirname(script_directory)

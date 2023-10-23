@@ -1,11 +1,16 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
-
-
-
 def analisis_correlacion_con_y(data):
+    """
+    Realiza un análisis de correlación entre variables y la variable objetivo 'y'.
+
+    Parameters:
+    data (DataFrame): El DataFrame que contiene los datos a analizar.
+
+    Returns:
+    None
+    """
     def plot_mean_y_for_bins_in_grid(variable, ax, bins=10):
         # Create bins for the variable
         bins = pd.cut(data[variable], bins=bins)

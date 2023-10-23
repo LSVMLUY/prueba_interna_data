@@ -26,4 +26,4 @@ analisis_correlacion_con_y(data)
 
 pares_redundantes(data)
 
-#analisis_y_pca(data)
+analisis_y_pca(data)

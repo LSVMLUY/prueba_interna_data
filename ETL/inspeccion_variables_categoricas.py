@@ -1,5 +1,14 @@
-def inspeccion_variables_categoricas(data):
-    # Tratamiento de variables categóricas
+﻿def inspeccion_variables_categoricas(data):
+    """
+    Realiza e imprime una inspección inicial de variables categóricas (tipo object) en un DataFrame.
+
+    Args:
+        data (pd.DataFrame): El DataFrame que se va a inspeccionar.
+
+    Returns:
+        None
+    """
+    # Tratamiento de variables categoricas
     categorical_columns = data.select_dtypes(include=['object']).columns
     categorical_data = data[categorical_columns]
     print(categorical_data.head(10))
@@ -9,4 +18,3 @@ def inspeccion_variables_categoricas(data):
         print(f"{clave}:")
         for elemento in valor:
             print(f"  - {elemento}")
-        

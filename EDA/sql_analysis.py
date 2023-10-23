@@ -3,6 +3,17 @@ import pandas as pd
 import os
 
 def print_resultados(title, query, df_query):
+    """
+    Imprime los resultados de una consulta SQL.
+
+    Parameters:
+    title (str): El título de los resultados.
+    query (str): La consulta SQL realizada.
+    df_query (DataFrame): Los resultados de la consulta.
+
+    Returns:
+    None
+    """
     print(title)
     print('"""')
     print(query)
@@ -10,8 +21,13 @@ def print_resultados(title, query, df_query):
     print(df_query)
     print('')
     
-    
 def sql_analysis():
+    """
+    Realiza análisis SQL en una base de datos SQLite.
+
+    Returns:
+    None
+    """
     # Obtiene la ruta del directorio actual del script (directorios superiores)
     script_directory = os.path.dirname(os.path.abspath(__file__))
     parent_directory = os.path.dirname(script_directory)
@@ -28,8 +44,6 @@ def sql_analysis():
     with open('query_+junio_+2m.txt', 'r') as file:
         query2 = file.read()
     
-    print(query2)
-    
     with open('query_MLB_lunes.txt', 'r') as file:
         query3 = file.read()
     
@@ -43,3 +57,4 @@ def sql_analysis():
     print_resultados("Registros cuya fecha de verificación es superior a Junio 2023 y cuya duración fue de más de 2 minutos \n",query3, df_query2)
     print_resultados("Registros de Brasil y dias Lunes \n",query3, df_query3)    
     conn.close()
+

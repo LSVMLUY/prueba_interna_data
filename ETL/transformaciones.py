@@ -7,7 +7,16 @@ from transformacion_day_of_week import *
 from transformacion_duration import *
 
 
-def transformaciones(data):
+def transformaciones(data):    
+    """
+    Aplica transformaciones a un DataFrame.
+    
+    Args:
+        data (pd.DataFrame): El DataFrame que se va a transformar.
+    
+    Returns:
+        None
+    """
     transformacion_y(data)
     transformacion_site(data)
     transformacion_pdays(data)

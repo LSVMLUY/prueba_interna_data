@@ -5,7 +5,15 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 def analisis_y_pca(data):
-    
+    """
+    Realiza un análisis de PCA en el conjunto de datos y calcula la varianza explicada.
+
+    Parameters:
+    data (DataFrame): El DataFrame que contiene los datos a analizar.
+
+    Returns:
+    None
+    """
     # Initial feature set (excluding the target variable 'y' and verification_date)
     features = [col for col in data.columns if col != 'y' and col != 'verification_date']
     
@@ -31,13 +39,6 @@ def analisis_y_pca(data):
     plt.ylabel('Varianza explicada acumulada')
     plt.grid(True)
     plt.show()
-    
-    # Si deseas obtener las cargas de los componentes para las características originales:
-    loadings = pca.components_
-    
-    # Por ejemplo, las cargas para el primer componente serían:
-    first_component_loadings = loadings[0, :]
-    
     
     # 1. Determine the number of components that sum up to 95% variance
     num_components = np.where(cumulative_explained_variance >= 0.95)[0][0] + 1

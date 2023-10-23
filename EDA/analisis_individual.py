@@ -4,6 +4,18 @@ import seaborn as sns
 import math as m
 
 def grid_dist_graphs(data, desde_graf=0 , hasta_graf=20, bins=30):
+    """
+    Genera gráficos de distribución para variables en el conjunto de datos.
+
+    Parameters:
+    data (DataFrame): El DataFrame que contiene los datos a analizar.
+    desde_graf (int): El índice de la primera variable a graficar.
+    hasta_graf (int): El índice de la última variable a graficar.
+    bins (int): El número de bins para el histograma.
+
+    Returns:
+    None
+    """
     nro_graficos=hasta_graf-desde_graf
     columns=data.columns
     fontsize=18
@@ -22,6 +34,15 @@ def grid_dist_graphs(data, desde_graf=0 , hasta_graf=20, bins=30):
 
 
 def analisis_individual(data):
+    """
+    Realiza un análisis individual de las variables en el conjunto de datos.
+
+    Parameters:
+    data (DataFrame): El DataFrame que contiene los datos a analizar.
+
+    Returns:
+    None
+    """
     grid_dist_graphs(data, desde_graf=0 , hasta_graf=12)
     grid_dist_graphs(data, desde_graf=12 , hasta_graf=24)
     grid_dist_graphs(data, desde_graf=24 , hasta_graf=36)

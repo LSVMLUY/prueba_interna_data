@@ -1,5 +1,15 @@
 import pandas as pd
+
 def pares_redundantes(data):
+    """
+    Identifica pares de variables altamente correlacionadas en el conjunto de datos.
+
+    Parameters:
+    data (DataFrame): El DataFrame que contiene los datos a analizar.
+
+    Returns:
+    None
+    """
     # Inicializar una lista para almacenar los pares de correlaciones
     correlation_pairs = []
     
