@@ -1,0 +1,6 @@
+SELECT 
+    *
+FROM
+    bi_mc_ya
+WHERE
+    site_id in ('MLA','MLU')

@@ -1,0 +1,7 @@
+SELECT 
+    *
+FROM
+    bi_mc_ya
+WHERE
+    date(verification_date_dt)>='2023-07-01' AND
+    duration>2

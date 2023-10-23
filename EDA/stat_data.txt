@@ -1,0 +1,4 @@
+SELECT 
+    *
+FROM
+    stat_mc_ya

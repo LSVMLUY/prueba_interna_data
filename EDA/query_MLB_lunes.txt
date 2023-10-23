@@ -1,0 +1,7 @@
+SELECT 
+    *
+FROM
+    bi_mc_ya
+WHERE
+    site_id='MLB' AND
+    day_of_week=1
