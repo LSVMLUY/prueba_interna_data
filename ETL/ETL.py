@@ -41,14 +41,21 @@ bi_data_df = data.copy()
 bi_data_df.drop("verification_date", axis=1, inplace=True)
 data.drop("verification_date_dt", axis=1, inplace=True)
 
-# Binarización de variables categóricas (excluyendo 'cols_to_exclude' si es necesario)
+# Binarización de variables categóricas
 data = binarizacion_categoricas(data)
 
 ## ETL: Analisis de "consistencia" (logica de negocio y de los datos).
+pd.set_option('display.max_rows', None)
+pd.set_option('display.float_format', '{:.3f}'.format)
+print(data.describe().loc[['min', 'max']].T )
 
+MLB = data[data["site_id_MLB"]==1]
+print("combinaciones unicas de un indice para un mes en MLB:")
+print(MLB[['cons.price.idx', 'month']].drop_duplicates().sort_values("month"))
+
+pd.reset_option('display.max_rows')
 
 ## ETL: Almacenamiento de datos
-
 # Ruta relativa al directorio principal desde la subcarpeta ETL
 db_path = os.path.join(parent_directory, 'mercadocredito.db')
 print("db path: " + str(db_path))

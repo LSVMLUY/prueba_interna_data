@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import math as m
 
-def grid_dist_graphs(data, desde_graf=0 , hasta_graf=20, bins=30):
+def grid_dist_graphs_frecuencia(data, desde_graf=0 , hasta_graf=20, bins=30):
     """
     Genera gráficos de distribución para variables en el conjunto de datos.
 
@@ -31,6 +31,35 @@ def grid_dist_graphs(data, desde_graf=0 , hasta_graf=20, bins=30):
         plt.tight_layout()
     plt.show()
     
+def grid_dist_graphs_boxplot(data, desde_graf=0 , hasta_graf=20, bins=30):
+    """
+    Genera gráficos de distribución para variables en el conjunto de datos.
+
+    Parameters:
+    data (DataFrame): El DataFrame que contiene los datos a analizar.
+    desde_graf (int): El índice de la primera variable a graficar.
+    hasta_graf (int): El índice de la última variable a graficar.
+
+    Returns:
+    None
+    """
+    nro_graficos=hasta_graf-desde_graf
+    columns=data.columns
+    fontsize=18
+    plt.figure(figsize=(30, 20))
+    subplot_idx_1 = m.floor(nro_graficos**0.5)
+    subplot_idx_2 = subplot_idx_1 +1 
+    for idx, col in enumerate(columns[desde_graf:hasta_graf]):
+        plt.subplot(subplot_idx_1, subplot_idx_2, idx + 1)
+        # Crea el boxplot utilizando seaborn
+        sns.boxplot(x=data[col],color='green')
+        # Agregar un título y etiquetas a los ejes 
+        plt.title(f'Boxplot de {col}')
+        plt.xlabel(f'{col}')
+        plt.ylabel('Valores')
+    plt.show()
+
+
 
 
 def analisis_individual(data):
@@ -43,12 +72,19 @@ def analisis_individual(data):
     Returns:
     None
     """
-    grid_dist_graphs(data, desde_graf=0 , hasta_graf=12)
-    grid_dist_graphs(data, desde_graf=12 , hasta_graf=24)
-    grid_dist_graphs(data, desde_graf=24 , hasta_graf=36)
-    grid_dist_graphs(data, desde_graf=36 , hasta_graf=48)
-    grid_dist_graphs(data, desde_graf=48 , hasta_graf=60)        
-    grid_dist_graphs(data, desde_graf=60 , hasta_graf=72)        
+    grid_dist_graphs_frecuencia(data, desde_graf=0 , hasta_graf=12)
+    grid_dist_graphs_frecuencia(data, desde_graf=12 , hasta_graf=24)
+    grid_dist_graphs_frecuencia(data, desde_graf=24 , hasta_graf=36)
+    grid_dist_graphs_frecuencia(data, desde_graf=36 , hasta_graf=48)
+    grid_dist_graphs_frecuencia(data, desde_graf=48 , hasta_graf=60)        
+    grid_dist_graphs_frecuencia(data, desde_graf=60 , hasta_graf=72)        
+
+    grid_dist_graphs_boxplot(data, desde_graf=0 , hasta_graf=12)
+    grid_dist_graphs_boxplot(data, desde_graf=12 , hasta_graf=24)
+    grid_dist_graphs_boxplot(data, desde_graf=24 , hasta_graf=36)
+    grid_dist_graphs_boxplot(data, desde_graf=36 , hasta_graf=48)
+    grid_dist_graphs_boxplot(data, desde_graf=48 , hasta_graf=60)        
+    grid_dist_graphs_boxplot(data, desde_graf=60 , hasta_graf=72)      
 
     print("Descripcion de principales estadisticos invididuales : \n")
     pd.set_option('display.max_rows', None)
