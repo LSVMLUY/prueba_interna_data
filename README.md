@@ -49,6 +49,7 @@ Con los datos curados y disponibles en una base de datos, se debe:
 Voy a proceder a explicar los pasos que me he planteado para resolver los pedidos de la propuesta. Los mismos, van a seguir el siguiente orden:
 
 ## ETL
+### [Detalle de premisas y conclusiones de limpieza y transofrmacion de los datos](https://github.com/LSVMLUY/prueba_interna_data/blob/main/ETL_readme.md)
 1. Lectura de datos.
 2. Limpieza y transformación de datos.
 3. Análisis de "consistencia" (logica de negocio y de los datos).
