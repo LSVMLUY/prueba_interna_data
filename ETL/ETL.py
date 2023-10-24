@@ -64,8 +64,8 @@ print("db path: " + str(db_path))
 engine = create_engine(f'sqlite:///{db_path}')  # Esto creará o usará un archivo "mercadocredito.db"
 
 # Cargar el DataFrame a una nueva tabla en SQLite
-data.to_sql('stat_mc_ya', engine, if_exists='replace')
-bi_data_df.to_sql('bi_mc_ya', engine, if_exists='replace')  # Creo tabla de Analisis de Negocio más amigable con variables categóricas
+data.to_sql('stat_mc_ya', engine, if_exists='replace',index=False)
+bi_data_df.to_sql('bi_mc_ya', engine, if_exists='replace',index=False)  # Creo tabla de Analisis de Negocio más amigable con variables categóricas
 
 # Cerrar la conexión
 engine.dispose()
