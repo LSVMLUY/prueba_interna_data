@@ -41,6 +41,22 @@ OBS: la decisión anterior debe ser correctamente documentada, para que posibles
 
 - Continuando con nuestras transformaciones de nuestro dataframe principal con fines de analisis estadistico, procedemos a binarizar variables categoricas, para una mejor manipulacion en los analisis que vamos a continuar.
 
+## ETL: Analisis de "consistencia" (logica de negocio y de los datos).
+-Buscamos con maximos y minimos consistencias en :
+  -edad (algo racional debajo de 120) y no negativo
+  - **Encontramos inconsistencia** month max =  12 , nos encontramos en el mes 10 y no tenemos variable de yr. Adicionalmente, a pesar de que no confirma nada, no hay tampoco un continuo de obs dado que el min es 3. 
+  Premisa para continuar: obviamos el hecho de que falta una variable de yr a pesar de que month indica 12 y nos encontarmos en el mes 10. En la realidad esta inconsistencia nos llevaria al menos, a checkear que por ejemplo, se traten de datos de los ultimos 12 meses corridos. Si pudieramos confirmar eso, deberiamos construir la variable yr a partir de esa premisa.
+  - day_of_week  max = 5 ; de todas formas el ETL se dejo preparado paar que futuros datos vengan de sabado y domingo.
+  - Duration max no alarmante de 80 min, min no negativo.
+  - Previous y campaign :  no negativos y debajo de un numero "razonable" . Nada alarmante en los maximos
+  - Ratios e indices (..rate , ..idx) Pueden ser negativos o positivos . No hay alarmas de sus valores absolutos maximos para tasas y ratios a priori.
+  -  Luego estan la mayoria de las variables que transformamos y/o binarizamos. Todo segun lo esperado
+
+-Verificaciones ad-hoc:
+  -Exploramos la posiblidad de que haya un unico indicador, en indices o ratios , por mes por site. No encontramos tal consistencia. NO implica necesariamente una inconsistencia de los datos. La documentacion brindada no indica que dichos indices son por site, y no pueden estar segmentados para el usuario de otra manera. No obstante, seria un punto para revisar con los proveedores del dato para asegurarnos.
+
+   
+
 
 ## ETL: Almacenamiento de datos
 ("Load")
