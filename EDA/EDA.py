@@ -17,7 +17,6 @@ sql_analysis()
 
 
 data= return_data_from_db()
-data.drop('index', axis=1, inplace=True)
 # EDA : Analisis distribuciones de forma individual
 
 analisis_individual(data)
