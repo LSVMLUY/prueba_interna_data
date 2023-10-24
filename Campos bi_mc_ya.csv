@@ -1,0 +1,26 @@
+﻿NOMBRE;DESCRIPCION;TIPO
+age;Edad;numeric
+job;Tipo de trabajo;categorical
+marital;Status marital;categorical
+education;Maxima educacion alcanzada;categorical
+default;Indica si tiene crédito en default.;categorical
+housing;Indica si la casa está hipotecada;categorical
+loan;Indica si tiene un préstamo personal;categorical
+contact;Tipo de contacto;categorical
+month;Mes donde se realizó el contacto;numeric
+day_of_week;Día de la semana donde se realizó el contacto;numeric
+duration;Duración del contacto medido en minutos;float
+campaign;Cantidad de contactos realizados durante la campaña, incluye el último contacto;numeric
+previous;Cantidad de contactos realizados antes de esta campaña;numeric
+emp.var.rate;Indicador trimestral de la tasa de variación del empleo;float
+cons.price.idx;Indicador mensual del índice de precios al consumidor;float
+cons.conf.idx;Indicador mensual del índice de confianza del consumidor;float
+euribor3m;Indicador trimestral de la tasa euríbor a 3 meses;float
+nr.employed;Indicador trimestral sobre la cantidad de  empleados;numeric
+y;Indica si el cliente está inscripto a Mercado Crédito Ya;boolean
+site_id;Pais;categorical
+contacted_previously;Flag. 1 indica que fue contactado anteriormente en la campaña previa;boolean
+pdays_less_30;Flag. 1 indica 30 o menos dias desde el ultimo contacto en la campaña anterior;boolean
+pdays_30_to_180;Flag. 1 indica entre 30 y 180 dias desde el ultimo contacto en la campaña anterior;boolean
+pdays_more_than_180;Flag. 1 indica 180 o mas dias desde el ultimo contacto en la campaña anterior;boolean
+verification_date_dt;Fecha de último contacto en formato UNIX timestamp;datetime

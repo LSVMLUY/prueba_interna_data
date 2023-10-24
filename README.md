@@ -53,7 +53,7 @@ Voy a proceder a explicar los pasos que me he planteado para resolver los pedido
 1. Lectura de datos.
 2. Limpieza y transformación de datos.
 3. Análisis de "consistencia" (logica de negocio y de los datos).
-4. Almacenamiento de datos.
+4. Almacenamiento de datos. (documentación de las tablas en el repositorio)
 
 ## ANALISIS
  ### [GoogleColab  donde puede reproducirse el analisis](https://colab.research.google.com/drive/1_wu4zk9XvLZZoL8ymi5xaylE9DacwnL8)

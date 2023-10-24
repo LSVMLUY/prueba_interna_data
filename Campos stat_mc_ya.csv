@@ -1,0 +1,66 @@
+﻿NOMBRE;DESCRIPCION;TIPO
+age;Edad;numeric
+month;Mes donde se realizó el contacto;numeric
+day_of_week;Día de la semana donde se realizó el contacto;numeric
+duration;Duración del contacto medido en minutos;float
+campaign;Cantidad de contactos realizados durante la campaña, incluye el último contacto;numeric
+previous;Cantidad de contactos realizados antes de esta campaña;numeric
+emp.var.rate;Indicador trimestral de la tasa de variación del empleo;float
+cons.price.idx;Indicador mensual del índice de precios al consumidor;float
+cons.conf.idx;Indicador mensual del índice de confianza del consumidor;float
+euribor3m;Indicador trimestral de la tasa euríbor a 3 meses;float
+nr.employed;Indicador trimestral sobre la cantidad de  empleados;numeric
+y;Indica si el cliente está inscripto a Mercado Crédito Ya;boolean
+verification_date;Fecha de último contacto en formato UNIX timestamp;numeric
+contacted_previously;Flag. 1 indica que fue contactado anteriormente en la campaña previa;boolean
+pdays_less_30;Flag. 1 indica 30 o menos dias desde el ultimo contacto en la campaña anterior;boolean
+pdays_30_to_180;Flag. 1 indica entre 30 y 180 dias desde el ultimo contacto en la campaña anterior;boolean
+pdays_more_than_180;Flag. 1 indica 180 o mas dias desde el ultimo contacto en la campaña anterior;boolean
+job_admin.;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_blue-collar;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_entrepreneur;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_housemaid;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_management;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_retired;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_self-employed;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_services;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_student;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_technician;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_unemployed;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+job_unknown;Tipo de trabajo . Si tiene este tipo es 1. Los tipos son unicos;boolean
+marital_divorced;Estado martial. 1 Si tiene este estado marital. Los estados maritales son unicos;boolean
+marital_married;Estado martial. 1 Si tiene este estado marital. Los estados maritales son unicos;boolean
+marital_single;Estado martial. 1 Si tiene este estado marital. Los estados maritales son unicos;boolean
+marital_unknown;Estado martial. 1 Si tiene este estado marital. Los estados maritales son unicos;boolean
+education_basic.4y;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+education_basic.6y;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+education_basic.9y;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+education_high.school;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+education_illiterate;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+education_professional.course;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+education_university.degree;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+education_unknown;Maximo nivel educativo alcanczado. 1 Si tiene este nivel educativo. Los niveles educativos maximos alcanzados son unicos;boolean
+default_no;Indica si tiene crédito en default. 1 en esta variable es que no tiene credito en default;boolean
+default_unknown;Indica si tiene crédito en default. 1 en esta variable es que no se sabe si  tiene credito en default;boolean
+default_yes;Indica si tiene crédito en default. 1 en esta variable es que tiene credito en default;boolean
+housing_no;Indica si la casa está hipotecada;boolean
+housing_unknown;Indica si la casa está hipotecada;boolean
+housing_yes;Indica si la casa está hipotecada;boolean
+loan_no;Indica si tiene un préstamo personal;boolean
+loan_unknown;Indica si tiene un préstamo personal;boolean
+loan_yes;Indica si tiene un préstamo personal;boolean
+contact_cellular;Tipo de contacto;boolean
+contact_telephone;Tipo de contacto;boolean
+poutcome_failure;Resultado de la campaña de marketing anterior;boolean
+poutcome_nonexistent;Resultado de la campaña de marketing anterior;boolean
+poutcome_success;Resultado de la campaña de marketing anterior;boolean
+site_id_MCO;Nombre del país;boolean
+site_id_MEC;Nombre del país;boolean
+site_id_MLA;Nombre del país;boolean
+site_id_MLB;Nombre del país;boolean
+site_id_MLC;Nombre del país;boolean
+site_id_MLM;Nombre del país;boolean
+site_id_MLU;Nombre del país;boolean
+site_id_MLV;Nombre del país;boolean
+site_id_MPE;Nombre del país;boolean
+site_id_unknown;Nombre del país;boolean
